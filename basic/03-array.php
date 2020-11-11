@@ -1,26 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<p>Hello World.</p>
-<p>Current Time is <?php echo date('D, d M Y H:i:s'); ?></p>
+<pre>
+<?php
+// Collection Type
 
-<ul>
-    <?php 
-    for ($i = 0; $i < 10; $i++) {
-        if ($i % 2 == 0) {
-            echo "<li style='color: red;'>$i</li>";
-        } else {
-            echo "<li>" . $i . "</li>";
-        }
-    } 
-    ?>
-</ul>
-</body>
-</html>
+// Array
+$a = [7, 8, 9];
+$a2 = array(5, 6, 7);
+var_dump("array", $a, $a2, count($a));
+
+// Append
+array_push($a, 11);
+var_dump("array-append", $a, count($a));
+
+// Remove - Index will NOT BE RESET!
+unset($a[0]);
+var_dump("array-remove", $a, count($a));
+
+// Associative Array (Map/Dictionary)
+$m = array("foo" => 99, "bar" => 88, "baz" => 77);
+var_dump("array-map",$m);
