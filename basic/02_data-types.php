@@ -20,3 +20,5 @@ var_dump($n, $n2, $n3, $f, $f2, $flag, $s, $s2);
 $name = "John";
 $greeting = "Hello $name";
 echo $greeting;
+$greeting2 = "Hello " . $name;
+echo $greeting2;
