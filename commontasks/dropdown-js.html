@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/vue.js"></script>
+  <title>PHP Lessons</title>
+</head>
+<body>
+<div id="app" class="section">
+  <div class="container">
+    <h1 class="title">Dropdown DEMO with Plain JS</h1>
+    <div class="dropdown" id="dropdownDemo">
+      <div class="dropdown-trigger">
+        <button class="button" onclick="toggleIsActive();">Press Me</button>
+      </div>
+      <div class="dropdown-menu">
+        <div class="dropdown-content">
+          <a class="dropdown-item">One</a>
+          <a class="dropdown-item">Two</a>
+          <a class="dropdown-item">Three</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 notification">Some text below dropdown component.</div>
+  </div>
+</div>
+<script>
+  function toggleIsActive() {
+    document.getElementById('dropdownDemo').classList.toggle('is-active');
+  }
+</script>
+</body>
+</html>
