@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/vue.js"></script>
     <title>PHP Lessons</title>
