@@ -25,3 +25,15 @@ Lessons for teaching PHP programming language.
 * HTML/CSS/JS https://developer.mozilla.org/en-US/
 * BulmaCSS https://bulma.io/
 * VueJS https://vuejs.org/
+
+## Learning Topics:
+
+* PHP include/require
+* Global variables
+* Form processing
+* Form validation/sanitizing
+* Form error handling
+* Data storage - DB Access
+* User authentication
+* User authorization
+* Cookie/Session management
