@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/vue.js"></script>
+    <title>PHP Lessons</title>
 </head>
 <body>
-<H1>PHP Lessons</H1>
-<ul>
-    <?php
-    // List of PHP files
-    $files = scandir(".");
-    for ($i = 0; $i < count($files); $i++) {
-        $file = $files[$i];
-        $ext = ".php";
-        $len = strlen($ext);
-        if (substr_compare( $file, $ext, -$len ) === 0) {
-            echo "<li><a href='$file'>$file</a></li>";
-        }
-    }
-    ?>
-</ul>
+<div class="section">
+    <div class="container">
+        <h1 class="title">File Listing</h1>
+        <ul class="panel">
+            <?php
+            // List of PHP files
+            $files = scandir(".");
+            for ($i = 0; $i < count($files); $i++) {
+                $file = $files[$i];
+                $ext = ".php";
+                $len = strlen($ext);
+                if (substr_compare( $file, $ext, -$len ) === 0) {
+                    echo "<li class='panel-block'><a href='$file'>$file</a></li>";
+                }
+            }
+            ?>
+        </ul>
+    </div>
+</div>
 
 </body>
 </html>

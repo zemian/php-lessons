@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontawesome/css/all.css">
+    <script src="../js/vue.js"></script>
+    <title>PHP Lessons</title>
+</head>
+<body>
+<div id='app' class="section">
+    <div class="container">
+        <h1 class="title">Icons Demo</h1>
+        <div class="block">
+            <span class="icon-text is-large">
+                <span class="icon">
+                    <i class="fas fa-lg fa-arrow-left"></i>
+                </span>
+                <span>fa-arrow-left</span>
+            </span>
+            <span class="icon-text is-large">
+                <span class="icon">
+                    <i class="fas fa-lg fa-arrow-right"></i>
+                </span>
+                <span>fa-arrow-right</span>
+            </span>
+        </div>
+        <div class="block">
+            <button class="button">
+                <span>Press Me</span>
+                <span class="icon">
+                    <i class="fas fa-heart"></i>
+                </span>
+            </button>
+            <button class="button">
+                <span>Press Me</span>
+                <span class="icon">
+                    <i class="fas fa-angle-down"></i>
+                </span>
+            </button>
+        </div>
+        <div class="block">
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="field">
+                <p class="control has-icons-right is-success">
+                    <input class="input" type="email" placeholder="Email">
+                    <span class="icon is-small is-right">
+                      <i class="fas fa-check"></i>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
