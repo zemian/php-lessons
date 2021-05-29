@@ -1,0 +1,5 @@
+@import url("bulma.css");
+
+.notification-box {
+    height: 20em;
+}
