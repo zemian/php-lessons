@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/vue.js"></script>
+  <title>PHP Lessons</title>
+</head>
+<body>
+<div id="app">
+  <section class="hero is-large is-primary">
+    <div class="hero-body">
+      <div class="columns m-4">
+        <div class="column">
+          <div class="notification is-danger">
+            PHP
+          </div>
+        </div>
+        <div class="column">
+          <div class="notification is-warning">
+            HTML/CSS/JavaScript
+          </div>
+        </div>
+        <div class="column">
+          <div class="notification is-info">
+            Bulma/VueJS
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  new Vue({
+    data: function () {
+      return {
+        isMobileMenuActive: null
+      }
+    },
+    methods: {
+      toggleIsMobileMenuActive() {
+        this.isMobileMenuActive = (this.isMobileMenuActive ? null : true);
+      }
+    }
+  }).$mount('#app');
+</script>
+</body>
+</html>
