@@ -4,8 +4,8 @@ Lessons for teaching PHP programming language.
 
 ## Learning Path
 
-* `basic` - Learn the basic programming language syntax and construct
-* `commontasks` - Learn how to do some common tasks with the language
+* `basic` - Learn the basic PHP programming language syntax and construct
+* `commontasks` - Learn how to do some common tasks with the PHP language mixed with HTML/CSS and JS.
 
 ## Required Software
 
@@ -25,15 +25,3 @@ Lessons for teaching PHP programming language.
 * HTML/CSS/JS https://developer.mozilla.org/en-US/
 * BulmaCSS https://bulma.io/
 * VueJS https://vuejs.org/
-
-## Learning Topics:
-
-* PHP include/require
-* Global variables
-* Form processing
-* Form validation/sanitizing
-* Form error handling
-* Data storage - DB Access
-* User authentication
-* User authorization
-* Cookie/Session management

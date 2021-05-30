@@ -22,3 +22,10 @@ $greeting = "Hello $name";
 echo $greeting;
 $greeting2 = "Hello " . $name;
 echo $greeting2;
+
+// New line will only work in double string!
+$s = "\n";
+
+// Use single quote string to escape double quotes!
+// Single quote does not do string substitution!
+$s = 'hello';

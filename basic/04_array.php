@@ -1,6 +1,4 @@
 <?php
-// Collection Type
-
 // Array
 $ary = [7, 8, 9];
 $ary2 = array(5, 6, 7);

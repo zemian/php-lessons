@@ -1,9 +1,5 @@
 <?php
-
-$text = <<< HERE
-A here doc is for
-multiline entries
-HERE;
-echo $text;
+// array can be use as map, and it can be convert into object and back.
+// json_encode() will return different result for empty array() vs empty object.
 
 

@@ -2,12 +2,5 @@
 // stdClass() vs array()
 // user defined class
 // attributes
-// references
+// references, note that object pass as reference, but array requires explicitly to be modified
 // generator
-$text = <<< HERE
-A here doc is for
-multiline entries
-HERE;
-echo $text;
-
-

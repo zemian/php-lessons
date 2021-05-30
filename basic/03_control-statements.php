@@ -1,4 +1,12 @@
 <?php
+
+// Operators: +, -, *, /, ()
+// Comparators: <, >, <=, >=, ===, ?:, ??
+
+// if, else, else if
+// for, while
+// switch
+
 $n = 10;
 if ($n < 10) {
     echo "n is less than 10";
