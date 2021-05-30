@@ -1,3 +1,8 @@
+<?php
+  /*
+  * Exercise: Create a list of alphabet letters. See char() function.
+  */
+?>
 <!doctype html>
 <html lang="en">
 <head>
