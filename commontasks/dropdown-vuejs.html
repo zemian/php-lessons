@@ -1,43 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/vue.js"></script>
-  <title>PHP Lessons</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/vue.js"></script>
+    <title>PHP Lessons</title>
 </head>
 <body>
 <div id="app" class="section">
-  <div class="container">
-    <h1 class="title">Dropdown DEMO with VueJS</h1>
-    <div class="dropdown" :class="{'is-active': isActive}">
-      <div class="dropdown-trigger">
-        <button class="button" @click="toggleIsActive">Press Me</button>
-      </div>
-      <div class="dropdown-menu">
-        <div class="dropdown-content">
-          <a class="dropdown-item">One</a>
-          <a class="dropdown-item">Two</a>
-          <a class="dropdown-item">Three</a>
+    <div class="container">
+        <h1 class="title">Dropdown DEMO with VueJS</h1>
+        <div class="dropdown" :class="{'is-active': isActive}">
+            <div class="dropdown-trigger">
+                <button class="button" @click="toggleIsActive">Press Me</button>
+            </div>
+            <div class="dropdown-menu">
+                <div class="dropdown-content">
+                    <a class="dropdown-item">One</a>
+                    <a class="dropdown-item">Two</a>
+                    <a class="dropdown-item">Three</a>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="mt-4 notification">Some text below dropdown component.</div>
     </div>
-    <div class="mt-4 notification">Some text below dropdown component.</div>
-  </div>
 </div>
 <script>
-  new Vue({
-    data: function () {
-      return {
-        isActive: null
-      }
-    },
-    methods: {
-      toggleIsActive() {
-        this.isActive = (this.isActive ? null : true);
-      }
-    }
-  }).$mount('#app');
+    new Vue({
+        data: function () {
+            return {
+                isActive: null
+            }
+        },
+        methods: {
+            toggleIsActive() {
+                this.isActive = (this.isActive ? null : true);
+            }
+        }
+    }).$mount('#app');
 </script>
 </body>
 </html>
