@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/vue.js"></script>
+    <title>PHP Lessons</title>
 </head>
 <body>
 
-<pre>
-    <?php
-    $db = new PDO('mysql:host=localhost;dbname=employees', 'zemian', 'test123');
-    $result = $db->query('SELECT count(*) FROM employees');
-    $row = $result->fetch();
-    print_r( $row );
-    ?>
-</pre>
+<div class="section">
+    <pre>
+        <?php
+        require '../env.php';
+        $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+        $stmt = $dbh->query('SELECT version()');
+        $version = $stmt->fetchColumn();
+        echo 'DB Connection test: MySQL version = ' . $version;
+        ?>
+    </pre>
+</div>
+
 </body>
 </html>
