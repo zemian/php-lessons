@@ -1,9 +1,8 @@
 <?php
   /*
-Lesson 2
-a. html, title, header, text, inline elements
-b. html list: ul, ol, li
-c. php for loop, using for loop in html
+- html, title, header, text, inline elements
+- html list: ul, ol, li
+- php for loop, using for loop in html
 
 Exercises:
 1. List all alphabet letters (see chr function)
@@ -39,7 +38,7 @@ Exercises:
         }
         ?>
     </ul>
-    <>
+    <ol>
         <?php
         for ($i = 0; $i < 10; $i++) {
             ?>
@@ -47,6 +46,6 @@ Exercises:
             <?php
         }
         ?>
-    </ul>
+    </ol>
 </body>
 </html>
