@@ -1,6 +1,7 @@
 <?php
 
 // Operators: +, -, *, /, ()
+// Operator: &&, ||
 // Comparators: <, >, <=, >=, ===, ?:, ??
 
 // if, else, else if
@@ -12,11 +13,13 @@ if ($n < 10) {
     echo "n is less than 10";
 }
 
-$x = null;
-if ($x) {
-    echo "x is true";
+$x = 99;
+if ($x < 10) {
+    echo "x is less than 10";
+} else if ($x > 10 && $x < 50) {
+    echo "x is between 10 and 50";
 } else {
-    echo "x is false";
+    echo "x is greater than 50";
 }
 
 if (isset($y)) {

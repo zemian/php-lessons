@@ -1,18 +1,4 @@
 <?php
-/*
-Lesson 1
-a. html document
-b. index.html -> index.php with <?php echo date('Y-m-d H:i:s'); ?>
-c. basic php data types and variable
-d. echo and var_dump
-e. string and substitute
-
-   Exercises:
-   1. explore string functions: explode, implode, strlen, strstr, strpos, trim, str_replace, chr
-   2. What happen when you do '1' + 2
-   3. What happen when you do 'x' + 2
-   4. What happen when you do true + 2
- */
 
 // PHP basic types
 // PHP is a dynamic language, so you don't have to declare type, but it has runtime type

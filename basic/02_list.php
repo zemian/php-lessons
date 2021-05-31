@@ -4,13 +4,9 @@ Lesson 2
 a. html, title, header, text, inline elements
 b. html list: ul, ol, li
 c. php for loop, using for loop in html
-d. php array, for and foreach on array
-e. php if/else
 
-   Exercises:
-   1. List all alphabet letters (see chr function)
-   2. Create a list of all 50 states and print the list
-   3. List states with 5 letters or less
+Exercises:
+1. List all alphabet letters (see chr function)
   */
 ?>
 <!doctype html>
@@ -35,5 +31,22 @@ e. php if/else
         <li>three</li>
     </ol>
     <p>Thank you for participating.</p>
+
+    <ul>
+        <?php
+        for ($i = 0; $i < 10; $i++) {
+            echo "<li>$i</li>";
+        }
+        ?>
+    </ul>
+    <>
+        <?php
+        for ($i = 0; $i < 10; $i++) {
+            ?>
+            <li><?php echo $i; ?></li>
+            <?php
+        }
+        ?>
+    </ul>
 </body>
 </html>
