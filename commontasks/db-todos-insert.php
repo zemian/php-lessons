@@ -22,7 +22,7 @@ $todos_count = $stmt->fetchColumn();
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bulma.css">
     <script src="../js/vue.js"></script>
     <title>PHP Lessons</title>
 </head>
