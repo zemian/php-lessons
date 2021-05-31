@@ -3,24 +3,67 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontawesome/css/all.css">
     <title>PHP Lessons</title>
 </head>
 <body>
-    <div class="level m-4">
-        <div class="level-left">
+    <div class="navbar is-spaced">
+        <div class="navbar-brand">
             <div class="level-item">
                 <img src="https://v3.vuejs.org/logo.png" style="width: 50px; height: 50px;">
-            </div>
-            <div class="level-item">
                 Vue.js
             </div>
         </div>
-        <div class="level-right">
-            <a class="level-item" href="">Docs</a>
-            <a class="level-item" href="">API Reference</a>
-            <a class="level-item" href="">Ecosystem</a>
-            <a class="level-item" href="">Translation</a>
-            <a class="level-item" href="">Github</a>
+        <div class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Docs</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">Guide</a>
+                        <a class="navbar-item">Style Guide</a>
+                        <a class="navbar-item">Cookbook</a>
+                    </div>
+                </div>
+                <a class="navbar-item" href="">API Reference</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Ecosystem</a>
+                    <div class="navbar-dropdown">
+                        <p class="navbar-item is-size-5">Community</p>
+                        <a class="navbar-item">Team</a>
+                        <a class="navbar-item">Partners</a>
+                        <a class="navbar-item">Themes</a>
+                        <hr class="navbar-divider"/>
+                        <p class="navbar-item is-size-5">Official Projects</p>
+                        <a class="navbar-item">Vue Router</a>
+                        <a class="navbar-item">Vue CLI</a>
+                        <a class="navbar-item">Blog</a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Translation</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            中文
+                        </a>
+                        <a class="navbar-item">
+                            한국어
+                        </a>
+                        <a class="navbar-item">
+                            日本語
+                        </a>
+                        <a class="navbar-item">
+                            Русский
+                        </a>
+                        <a class="navbar-item">
+                            More Translation...
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-item" href="">
+                    <span class="mr-1">Github</span>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
         </div>
     </div>
     <div class="section">
@@ -40,6 +83,12 @@
                                 </ul>
                             </li>
                             <li><a>Application & Component Instances</a></li>
+                        </ul>
+                        <p class="menu-label">Components In-Depth</p>
+                        <ul class="menu-list">
+                            <li><a>Component Registration</a></li>
+                            <li><a>Props</a></li>
+                            <li><a>Non-Pro attributes</a></li>
                         </ul>
                     </div>
                 </div>
