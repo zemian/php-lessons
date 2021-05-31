@@ -1,6 +1,16 @@
 <?php
   /*
-  * Exercise: Create a list of alphabet letters. See char() function.
+Lesson 2
+a. html, title, header, text, inline elements
+b. html list: ul, ol, li
+c. php for loop, using for loop in html
+d. php array, for and foreach on array
+e. php if/else
+
+   Exercises:
+   1. List all alphabet letters (see chr function)
+   2. Create a list of all 50 states and print the list
+   3. List states with 5 letters or less
   */
 ?>
 <!doctype html>
