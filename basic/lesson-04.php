@@ -23,7 +23,11 @@ $images = [
     <p>Random: <?php echo rand(1, 3); ?></p>
     <p>Random: <?php echo rand(10, 20); ?></p>
 
-    <!-- A picture and a caption text - automatic styled by browser as a block element-->
+    <!-- A picture and a caption text -->
+    <!--
+    The figure element is just a block element, and it's  automatic styled by browser.
+    often time, we simply replace it with a more generic "div" instead.
+    -->
     <figure>
         <img src="<?php echo $images[2]; ?>" width="600">
         <figcaption>Hello there!</figcaption>
