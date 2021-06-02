@@ -15,6 +15,14 @@
 
 <?php include 'lesson-05-navbar.php'; ?>
 
+<h1>Horizontal List - li inline-block</h1>
+<ul style="list-style: none; margin: 0;">
+    <!-- Note the space between inline-block element is actually from space between "li"! -->
+    <li style="display: inline-block; width: 150px; height: 80px; text-align: center;"><a href="../basic/lesson-01.php">one</a>
+    <li style="display: inline-block; width: 150px; height: 80px; text-align: center;"><a href="../basic/lesson-01.php">two</a>
+    <li style="display: inline-block; width: 150px; height: 80px; text-align: center;"><a href="../basic/lesson-01.php">three</a>
+</ul>
+
 <h1>A div box - horizontal center</h1>
 <div style="background-color: pink; height: calc(88px * 3);">
     <div style="background-color: lightblue; width: 88px; height: 88px;  margin: 0 auto;"></div>
