@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app" class="section">
+    <div class="container">
+        <div class="level">
+            <button class="button" @click="hasBg = !hasBg">Test</button>
+        </div>
+        <div class="box" :class="myStrClass" style="width: 20rem; height: 10rem;">myStrClass</div>
+        <div class="box" :class="myListClass" style="width: 20rem; height: 10rem;">myListClass</div>
+        <div class="box" :class="{'has-background-success': this.hasBg, 'has-text-centered': true}" style="width: 20rem; height: 10rem;">myObjectClass</div>
+    </div>
+</div>
+<script>
+    /**
+     * ":class" support 3 types of values: String, List or Object, and it will append to existing class list
+     */
+    const app = Vue.createApp({
+        data: function () {
+            return {
+                hasBg: true,
+                myStrClass: 'has-background-info has-text-centered',
+                myListClass: ['has-background-danger', 'has-text-centered']
+            }
+        }
+    });
+    app.mount('#app');
+</script>
+
+</body>
+</html>
