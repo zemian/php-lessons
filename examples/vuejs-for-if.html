@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app" class="section">
+    <div class="container">
+        <ul>
+            <template v-for="x in 10">
+                <li v-if="x % 2 === 0">{{x}}</li>
+            </template>
+        </ul>
+    </div>
+</div>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+            }
+        }
+    });
+    app.mount('#app');
+</script>
+
+</body>
+</html>
