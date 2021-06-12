@@ -2,6 +2,9 @@
 /*
 - html div, navbar and menu
 - php require/include
+
+<!-- We introduce Bulma -->
+
  */
 ?>
 
