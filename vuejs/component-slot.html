@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app" class="section">
+    <div class="container">
+        <box>
+        </box>
+    </div>
+    <div class="container">
+        <box>
+            <template v-slot:title>Hello Box</template>
+            I am a cool box.
+        </box>
+    </div>
+    <div class="container">
+        <box>
+            <template #title>Hello Box2</template>
+            I am a cool box.
+        </box>
+    </div>
+</div>
+<template id="box">
+    <div class="box">
+        <h1 class="title"><slot name="title">Default Box Title</slot></h1>
+        <slot>Default Box Content</slot>
+    </div>
+</template>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {}
+        }
+    });
+    app.component('box', {
+        template: '#box'
+    });
+    app.mount('#app');
+</script>
+
+</body>
+</html>
