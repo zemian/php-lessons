@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app" class="section">
+    <h1 class="title">v-for</h1>
+    <div class="box">
+        <template v-for="x in 5">
+            <div>{{x}}</div>
+        </template>
+    </div>
+    <div class="box">
+        <div v-for="x in 5">
+            <div>{{x}}</div>
+        </div>
+    </div>
+
+    <h1 class="title">v-if</h1>
+    <div class="box">
+        <template v-if="isOpen">
+            <div class="notification is-primary">TEST</div>
+        </template>
+    </div>
+    <div class="box">
+        <div v-if="isOpen">
+            <div class="notification is-primary">TEST</div>
+        </div>
+    </div>
+
+    <!-- NOTE: template does now work on directive that produce output.
+    eg: v-text will render output in template which will not display in
+    browser. -->
+    <h1 class="title">v-text</h1>
+    <div class="box">
+        <template v-text="message"></template>
+    </div>
+    <div class="box">
+        <div v-text="message"></div>
+    </div>
+</div>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                isOpen: true,
+                message: 'Hello'
+            }
+        }
+    });
+    app.mount('#app');
+</script>
+
+</body>
+</html>
