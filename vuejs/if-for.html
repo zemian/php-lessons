@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<!--
+v-if has higher precedence than v-for.
+To separate them, we use template as pseudo element, and vue will remote it
+after binding.
+-->
 <div id="app" class="section">
     <div class="container">
         <ul>
