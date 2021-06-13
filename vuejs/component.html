@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app" class="section">
+    <div class="container">
+        <hello-world message="Hello"></hello-world>
+    </div>
+</div>
+<template id="hello-world">
+    <div>{{message}}</div>
+</template>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {}
+        }
+    });
+    app.component('hello-world', {
+        template: '#hello-world',
+        props: ['message']
+    });
+    app.mount('#app');
+</script>
+
+</body>
+</html>
