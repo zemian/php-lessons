@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app" class="section">
+    <div class="container">
+        <h1>Unordered List Types</h1>
+        <div class="select">
+            <select v-model="selected">
+                <option v-for="name in types" :value="name">{{name}}</option>
+            </select>
+        </div>
+        <div class="content">
+            <ul :style="{'list-style-type': selected}">
+                <li v-for="name in types">{{name}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    /**
+     * https://en.wikipedia.org/wiki/Bullet_(typography)
+     * https://unicode.org/emoji/charts/full-emoji-list.html
+     */
+    const app = Vue.createApp({
+        data() {
+            return {
+                types: ['disc', 'circle', 'square', 'decimal', 'georgian',
+                    'trad-chinese-informal', 'kannada', 'none',
+                    "'-'", "'-> '",
+                    "'\u29BF '", "'\u2023 '", "'\u263A '", "'\uD83D\uDC49 '"],
+                selected: 'circle'
+            }
+        }
+    });
+    app.mount('#app');
+</script>
+
+</body>
+</html>
