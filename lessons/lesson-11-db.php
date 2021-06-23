@@ -1,9 +1,24 @@
-<?php
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/bulma.css">
+    <script src="../js/vue.js"></script>
+    <title>PHP Lessons</title>
+</head>
+<body>
 
-require '../env.php';
-$dbh = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
-$stmt = $dbh->query('SELECT version()');
-$version = $stmt->fetchColumn();
-echo 'DB Connection test: MySQL version = ' . $version;
+<div class="section">
+    <pre>
+        <?php
+        require '../env.php';
+        $dbh = new PDO(DB_DSN, DB_USER, DB_PASSWORD);
+        $stmt = $dbh->query('SELECT version()');
+        $version = $stmt->fetchColumn();
+        echo 'DB Connection test: MySQL version = ' . $version;
+        ?>
+    </pre>
+</div>
 
-// See "examples/db-todos.php" for more on CRUD operations.
+</body>
+</html>
