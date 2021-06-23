@@ -1,7 +1,7 @@
 <?php
 $json_string = file_get_contents('../data/us_state_capitals.json');
 $data = json_decode($json_string);
-$props = get_object_vars($data);
+// $props = get_object_vars($data); // return all the visible properties into a array. (cast array will ignore visibility)
 //var_dump($props);
 ?>
 
@@ -15,7 +15,7 @@ $props = get_object_vars($data);
 
 <h1>Table</h1>
 <table>
-    <?php foreach ($props as $state => $info) { ?>
+    <?php foreach ($data as $state => $info) { ?>
     <tr>
         <td><?php echo $state; ?></td>
         <td><?php echo $info->name; ?></td>
