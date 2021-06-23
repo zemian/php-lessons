@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+</head>
+<body>
+
+<style>
+    .box {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: red;
+        color: white;
+    }
+
+    #two {
+        /*position: static;*/
+        position: relative;
+        /*position: absolute;*/
+        /*position: sticky;*/
+        /*position: fixed;*/
+        top: 20px;
+        left: 20px;
+        background: blue;
+    }
+
+    .large-content-height {
+        height: 200vh;
+        background-color: lightblue;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+    }
+</style>
+
+<div class="large-content-height">
+  <div class="box" id="one">One</div>
+  <div class="box" id="two">Two</div>
+  <div class="box" id="three">Three</div>
+  <div class="box" id="four">Four</div>
+</div>
+
+</body>
+</html>
