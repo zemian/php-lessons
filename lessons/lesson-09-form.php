@@ -38,21 +38,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form method="POST" action="lesson-09-form.php" style="width: 40rem;">
                 <h1 class="title">Contact Form</h1>
                 <div class="field">
-                    <div class="label">Name</div>
+                    <label class="label">Name</label>
                     <div class="control">
                         <input class="input" type="text" name="name">
                     </div>
                 </div>
                 <div class="field">
-                    <div class="label">Email</div>
+                    <label class="label">Email</label>
                     <div class="control">
                         <input class="input" type="email" name="email">
                     </div>
                 </div>
                 <div class="field">
-                    <div class="label">Message</div>
+                    <label class="label">Message</label>
                     <div class="control">
                         <textarea class="textarea" name="message"></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" name="opt"> Option1
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="opt"> Option2
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="opt"> Option3
+                        </label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="choice"> Choice1
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="choice"> Choice2
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="choice"> Choice3
+                        </label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Select</label>
+                    <div class="control">
+                        <div class="select">
+                            <select>
+                                <option value="mon">Monday</option>
+                                <option value="tue">Tuesday</option>
+                                <option value="wed">Wednesday</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
