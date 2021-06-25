@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app">
+    <div style="display: flex; height: 100vh;">
+        <div style="background-color: pink; flex-grow: 0; flex-shrink: 0; transition: flex-basis 1s;"
+            :style="{'flex-basis': leftPanelFlexBasis}">
+        </div>
+        <div style="flex: 1 1 auto; margin: 1rem;">
+            <div class="level">
+                <div class="level-left">
+                    <button class="button" @click="toggleLeftPanel">
+                        <span class="icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                isLeftPanelOpened: true,
+                leftPanelFlexBasis: '500px'
+            }
+        },
+        methods: {
+            toggleLeftPanel() {
+                this.isLeftPanelOpened = !this.isLeftPanelOpened;
+                this.leftPanelFlexBasis = this.isLeftPanelOpened ? '500px' : '0';
+            }
+        }
+    });
+    app.mount('#app');
+</script>
+
+</body>
+</html>
