@@ -3,7 +3,7 @@
  * All programmers should learn: Floating Point Numbers and Unicode!
  *
  * We will explore Unicode here.
- * A must read: https://blog.codinghorror.com/there-aint-no-such-thing-as-plain-text/
+ * A must read: https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
  */
 
 // What is Unicode?
@@ -52,6 +52,9 @@
 //   Leading bytes of 4-byte codes start with four 1s followed by a 0 (i.e. 11110)
 //   * Continuation bytes (of all multi-byte codes) start with a single 1 followed by a 0 (i.e. 10)
 
+// Now it comes to PHP string and Unicode
+// PHP string is 8 bits (byte) string. It does not support Unicode natively!
+// https://www.php.net/manual/en/language.types.string.php
 
 // PHP 7 support Unicode CodePoint escape syntax
 var_dump("\u{aa}");
