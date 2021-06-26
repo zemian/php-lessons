@@ -16,6 +16,9 @@
             <input class="input" v-model="codePoint">
         </div>
         <pre>UTF Surrogate: {{codePointInUTF}}</pre>
+        <div>
+            <span style="font-size: 10rem;">{{htmlDecoding}}</span>
+        </div>
     </div>
 </div>
 <script>
@@ -47,9 +50,13 @@
             }
         },
         computed: {
-            codePointInUTF: function() {
+            codePointInUTF: function () {
                 //console.log(this.codePoint, toUTF16(parseInt(this.codePoint, 16)));
                 return toUTF16(parseInt(this.codePoint, 16));
+            },
+            htmlDecoding: function () {
+                // https://stackoverflow.com/questions/49065127/how-to-display-unicode-hexadecimal-emoji-and-octal-literals-in-html-using-vue
+                return this.codePointInUTF.replace(/\\u([0-9A-Fa-f]{4})/g, (m, p1) => String.fromCharCode(parseInt(p1, 16)));
             }
         }
     });
