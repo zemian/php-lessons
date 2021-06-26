@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app" class="section">
+    <div class="container">
+        <div class="content">
+            <!-- HTML Entity - reserved characters and how to escape them -->
+            <p>To display a less than sign (<) we must write: &lt; or &gt; so we can display &lt;code&gt;
+                without browser thinking we are actually using the code tag.</p>
+
+            <p>To escape the entity itself (let say we want to print the entity code), we need escape them:
+                &amp;lt; and &amp;gt;</p>
+
+            <!-- The pre nor code element will not escape entities. -->
+            <pre>To display a less than sign (<) we must write: &lt; or &gt;.</pre>
+            <p>To display a less than sign (<) we must write: <code>&lt;</code> or <code>&gt;</code>.</p>
+
+            <p>HTML blank   space will be removed by browser.
+            To prevent this, we use &nbsp;&nbsp;&nbsp; to add reasl space.</p>
+
+            <!-- HTML Entity can have name or just a number. -->
+            <p>Some common HTML entities: https://www.w3schools.com/html/html_entities.asp</p>
+            <p>Copyright &copy; or &#169;</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
