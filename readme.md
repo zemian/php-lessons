@@ -4,8 +4,9 @@ Lessons for teaching PHP programming language.
 
 ## Learning Path
 
-* `basic` - Learn the basic PHP programming language syntax and construct
-* `commontasks` - Learn how to do some common tasks with the PHP language mixed with HTML/CSS and JS.
+* `lessons` - Learn the basic PHP programming language syntax and construct
+* `html-css-js` - Learn HTML/CSS/JS with BulmaCSS and VueJS
+* `examples` - Learn HTML/CSS/JS with BulmaCSS and VueJS
 
 ## Required Software
 
