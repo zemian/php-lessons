@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div id="app" class="section">
+<div class="section">
     <div class="container">
         <div class="content">
             <p>I am a &#128512</p>
@@ -16,6 +16,23 @@
         </div>
     </div>
 </div>
+
+<div id="app" class="section">
+    <div class="container">
+        JS unicode:
+        <div class="content" v-html="stringContent">
+        </div>
+    </div>
+</div>
+<script>
+Vue.createApp({
+    data() {
+        return {
+            stringContent: String.fromCodePoint([0x1F600])
+        }
+    }
+}).mount('#app');
+</script>
 
 </body>
 </html>
