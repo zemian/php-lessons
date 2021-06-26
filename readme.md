@@ -1,12 +1,14 @@
 # php-lessons
 
-Lessons for teaching PHP programming language.
+Lessons & teaching notes on web development using PHP/HTML/CSS/JS.
 
 ## Learning Path
 
 * `lessons` - Learn the basic PHP programming language syntax and construct
 * `html-css-js` - Learn HTML/CSS/JS with BulmaCSS and VueJS
-* `examples` - Learn HTML/CSS/JS with BulmaCSS and VueJS
+* `examples` - Some common web examples, games and common tasks
+* `css/js/data` - Library & data files for web development
+* `building-web-sites` - How to build web sites
 
 ## Required Software
 
@@ -26,20 +28,3 @@ Lessons for teaching PHP programming language.
 * HTML/CSS/JS https://developer.mozilla.org/en-US/
 * BulmaCSS https://bulma.io/
 * VueJS https://vuejs.org/
-
-## Lessons notes
-
-Lesson 3
-a. html table
-b. php associative array
-
-   Exercises:
-   1. print tables of states with each capital
-
-Lesson 4
-a. html form inputs
-b. php check request type and process form inputs
-
-   Exercises:
-   1. Create a contact form and process it
-   2. Validate inputs for numbers, max string
