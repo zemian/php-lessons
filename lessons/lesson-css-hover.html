@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+<style>
+    .mybox3 {
+        background-color: #00d1b2;
+    }
+    .mybox3:hover {
+        background-color: lightpink;
+    }
+</style>
+<div class="section">
+    <div class="container">
+        <div class="box mybox3" style="height: 300px; width: 300px;">
+        </div>
+    </div>
+</div>
+
+<!-- Hover styling affect vs user click interaction styling effect -->
+<div class="section" id="app">
+    <div class="container">
+        <div class="box mybox4" style="height: 300px; width: 300px;"
+             :style="{'background-color': bg}"
+             @click="bg= (bg === 'lightpink') ? '#00d1b2' : 'lightpink'">
+        </div>
+    </div>
+</div>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                bg: '#00d1b2'
+            }
+        }
+    }).mount("#app");
+</script>
+
+</body>
+</html>

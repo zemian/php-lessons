@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+</head>
+<body>
+
+<style>
+    .mybox1:hover {
+        background-color: lightpink;
+    }
+
+    .mybox2:hover {
+        background-color: lightpink; !important;
+    }
+
+    .mybox3 {
+        background-color: #00d1b2;
+    }
+    .mybox3:hover {
+        background-color: lightpink;
+    }
+</style>
+<div class="section">
+    <div class="container">
+        <!-- Note: Bulma "has-background-primary" has !important override, so it's not
+        a good example to use here for hover demo! -->
+        <!-- Note#2: Inline "style" attribute has higher precedence than css rule in "mybox1:hover"
+        hence, the above will not take effect! You can proof this by Chrome Developer tool:
+        inspect this "div", then force element state to see that it is been applied. -->
+        <div class="box mybox1" style="height: 300px; width: 300px; background-color: #00d1b2;">
+        </div>
+
+        <!-- Note: it will fail even if you ass "!important" to it! -->
+        <div class="box mybox2" style="height: 300px; width: 300px; background-color: #00d1b2;">
+        </div>
+
+        <!-- Now this will work, since there is no inline to overrides it. -->
+        <div class="box mybox3" style="height: 300px; width: 300px;">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
