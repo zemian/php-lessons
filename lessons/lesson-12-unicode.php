@@ -59,8 +59,9 @@
 // PHP 7 support Unicode CodePoint escape syntax
 var_dump("\u{aa}");
 var_dump("\u{0000aa}");
-var_dump("\u{9999}"); // 香
-var_dump("\u{1F600}"); // smiley
+var_dump("\u{9999}", strlen("\u{9999}")); // 香
+var_dump("\u{1F600}", strlen("\u{1F600}")); // smiley
+var_dump("\u{41}", strlen("\u{41}")); // "A"
 
 // IntlChar::chr — Return Unicode character by code point value
 // https://www.php.net/manual/en/intlchar.chr.php
