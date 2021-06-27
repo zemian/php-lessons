@@ -19,7 +19,7 @@ $todos_stmt->execute();
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/bulma.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
     <script src="../js/vue.js"></script>
     <title>PHP Lessons</title>
 </head>
