@@ -4,11 +4,11 @@ Lessons & teaching notes on web development using PHP/HTML/CSS/JS.
 
 ## Learning Path
 
-* `lessons` - Learn the basic PHP programming language syntax and construct
-* `html-css-js` - Learn HTML/CSS/JS with BulmaCSS and VueJS
-* `examples` - Some common web examples, games and common tasks
+* `lessons` - Lessons for learning PHP/HTML/CSS/JS
+* `html-css-js` - Experiment HTML/CSS/JS with BulmaCSS and VueJS
+* `examples` - Collection of common web tasks, games and examples
 * `css/js/data` - Library & data files for web development
-* `building-web-sites` - How to build web sites
+* `building-web-sites` - How to build web sites & layout
 
 ## Required Software
 
