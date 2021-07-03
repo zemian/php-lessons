@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+<div id="app" class="section">
+    <div class="container">
+        <ul class="timeline">
+            <li class="block" v-for="i in 10">{{addDay(startDate, -i).toISOString()}}</li>
+        </ul>
+    </div>
+</div>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                startDate: this.createDate()
+            }
+        },
+        methods: {
+            createDate() {
+                const d = new Date();
+                d.setHours(0, 0, 0, 0);
+                return d;
+            },
+            addDay(date, n) {
+                date.setDate(date.getDate() + n);
+                return date;
+            }
+        }
+    }).mount('#app');
+</script>
+
+</body>
+</html>
