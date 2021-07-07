@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <link rel="stylesheet" href="../css/bulma.css">
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+
+<!--
+Create a page layout that display table data with min-height and place a pagination
+nav on bottom.
+-->
+<div id="app" class="section">
+    <div class="container">
+        <div class="level">
+            <div class="level-item buttons">
+                <button class="button" @click="dataSize = 10">DataSize#10</button>
+                <button class="button" @click="dataSize = 20">DataSize#20</button>
+                <button class="button" @click="dataSize = 100">DataSize#100</button>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <div style="flex: 1 1 auto; min-height: 80vh;">
+                <table class="table is-hoverable">
+                    <tr v-for="i in dataSize">
+                        <td>{{i}}</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, vel.</td>
+                        <td>{{new Date().toISOString()}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="flex: 1 1 auto;">
+                <nav class="pagination" role="navigation" aria-label="pagination">
+                    <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+                    <a class="pagination-next">Next page</a>
+                    <ul class="pagination-list">
+                        <li>
+                            <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+                        </li>
+                        <li>
+                            <a class="pagination-link" aria-label="Goto page 2">2</a>
+                        </li>
+                        <li>
+                            <a class="pagination-link" aria-label="Goto page 3">3</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        data() {
+            return {
+                dataSize: 10
+            }
+        }
+    }).$mount('#app');
+</script>
+
+</body>
+</html>
