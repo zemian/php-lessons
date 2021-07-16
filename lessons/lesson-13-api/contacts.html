@@ -31,20 +31,41 @@
             <td>{{contact.name}}</td>
             <td>{{contact.email}}</td>
             <td>{{contact.subject}}</td>
+            <td>
+                <a @click="viewData(contact.id)">View</a> |
+                <a @click="editData(contact.id)">Edit</a> |
+                <a @click="deleteData(contact.id)">Delete</a>
+            </td>
         </tr>
     </table>
+
+    <div id="deleteData" class="modal" :class="{'is-active': isDeletePopup}">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="notification is-danger">
+                <p>Are you sure you want to delete?</p>
+                <div class="buttons">
+                    <button class="button" @click="deleteDataConfirmed">Yes</button>
+                    <button class="button" @click="deleteDataCancelled">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     let vm = Vue.createApp({
         data: function () {
             return {
+                apiBaseUrl: 'http://localhost:3000/lessons/lesson-13-api',
                 contacts: [],
                 totalItems: 0,
-                pageSize: 5,
+                pageSize: 18,
                 hasMore: true,
                 page: 1,
                 offset: 0,
-                numOfPageButtons: 5 // should be a odd number
+                numOfPageButtons: 5, // should be a odd number,
+                deleteId: null,
+                isDeletePopup: false,
             }
         },
         computed: {
@@ -98,7 +119,7 @@
         },
         methods: {
             fetchData: function () {
-                let url = `contacts.php?offset=${this.offset}&limit=${this.pageSize}`;
+                let url = `${this.apiBaseUrl}/contacts.php?offset=${this.offset}&limit=${this.pageSize}`;
                 fetch(url).then(resp => resp.json()).then(data => {
                     this.contacts = data.items;
                     this.totalItems = data.total_items;
@@ -125,6 +146,35 @@
                     this.offset = (pageNum - 1) * this.pageSize;
                     this.fetchData();
                 }
+            },
+            viewData(id) {
+                console.log("viewData", id);
+            },
+            editData(id) {
+                console.log("editData", id);
+            },
+            deleteData(id) {
+                console.log("deleteData", id);
+                this.deleteId = id;
+                this.isDeletePopup = true;
+            },
+            deleteDataConfirmed() {
+                let url = `${this.apiBaseUrl}/contacts.php?id=${this.deleteId}`;
+                let options = {
+                    method: 'DELETE'
+                }
+                fetch(url, options).then(resp => resp.json()).then(data => {
+                    console.log("Delete result", data);
+
+                    this.deleteId = null;
+                    this.isDeletePopup = false;
+
+                    this.fetchData(0);
+                });
+            },
+            deleteDataCancelled() {
+                this.deleteId = null;
+                this.isDeletePopup = false;
             }
         },
         mounted: function() {
