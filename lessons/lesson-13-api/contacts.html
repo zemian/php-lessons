@@ -98,7 +98,7 @@
         },
         methods: {
             fetchData: function () {
-                let url = `setup.php?offset=${this.offset}&limit=${this.pageSize}`;
+                let url = `contacts.php?offset=${this.offset}&limit=${this.pageSize}`;
                 fetch(url).then(resp => resp.json()).then(data => {
                     this.contacts = data.items;
                     this.totalItems = data.total_items;
