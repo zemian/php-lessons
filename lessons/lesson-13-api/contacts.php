@@ -3,6 +3,10 @@
  * API to perform CRUD operation on contacts data
  */
 
+// NOTE: We did not add validation in this lesson here, but if you do add it, ensure you
+// do not escape HTML characters on all inputs, that's because you should allow the JS
+// client, such as VueJS, to escape the HTML input instead.
+
 // Define DB connection using env file
 require_once '../../env.php';
 
