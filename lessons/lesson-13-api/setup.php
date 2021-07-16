@@ -1,19 +1,20 @@
 <?php
-/* 
-A simple REST API that manage CRUD data record
+/*
+A DB setup script to create DB table and add sample data for contact form.
+A simple REST API that manage "contact" CRUD data record
 
 Example usage:
-http://localhost/learn-php/data-api/index.php?action=test_db
-http://localhost/learn-php/data-api/index.php?action=init_data
-http://localhost/learn-php/data-api/index.php?action=create_data&count=1000
-http://localhost/learn-php/data-api/index.php
-http://localhost/learn-php/data-api/index.php?offset=20
-http://localhost/learn-php/data-api/index.php?action=get_data&id=1
-http://localhost/learn-php/data-api/index.php?action=delete_data&id=1
+http://localhost/learn-php/data-api/setup.php?action=test_db
+http://localhost/learn-php/data-api/setup.php?action=init_data
+http://localhost/learn-php/data-api/setup.php?action=create_data&count=1000
+http://localhost/learn-php/data-api/setup.php
+http://localhost/learn-php/data-api/setup.php?offset=20
+http://localhost/learn-php/data-api/setup.php?action=get_data&id=1
+http://localhost/learn-php/data-api/setup.php?action=delete_data&id=1
 curl \
   -d '{"id":"1", "name":"tester","email":"tester@localhost.com","subject": "Update test","message":"Just a test."}' \
   -H 'Content-Type: application/json' \
-  http://localhost/learn-php/data-api/index.php?action=update_data
+  http://localhost/learn-php/data-api/setup.php?action=update_data
 
  */
 

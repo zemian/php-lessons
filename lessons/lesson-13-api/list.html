@@ -1,4 +1,13 @@
-<?php require 'header.php' ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts Management</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
 <div id="app" class="section">
     <h1 class="title">Contacts</h1>
     <p>Total Items: {{totalItems}}</p>
@@ -89,7 +98,7 @@
         },
         methods: {
             fetchData: function () {
-                let url = `api.php?offset=${this.offset}&limit=${this.pageSize}`;
+                let url = `setup.php?offset=${this.offset}&limit=${this.pageSize}`;
                 fetch(url).then(resp => resp.json()).then(data => {
                     this.contacts = data.items;
                     this.totalItems = data.total_items;
@@ -123,5 +132,7 @@
         }
     }).mount('#app');
 </script>
-<?php require 'footer.php' ?>
+
+</body>
+</html>
 
