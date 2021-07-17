@@ -7,7 +7,7 @@ $message = htmlspecialchars($_POST['message'] ?? '');
 $message = htmlspecialchars($message);
 
 // NOTE: How should we store the user input then?
-// We are suppose to "Filter on input, escape on output". but don't escape more than once.
+// We are suppose to "Filter (sanitize & validate) on input, escape on output". but don't escape more than once.
 // Therefore we store data after we filtered them, but before escape. Data retrieved from DB
 // needs to be escaped before display on UI.
 ?>
