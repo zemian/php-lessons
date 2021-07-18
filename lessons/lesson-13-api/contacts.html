@@ -10,6 +10,11 @@
 
 <div id="app" class="section">
     <h1 class="title">Contacts</h1>
+
+    <div>
+        <button class="button" @click="createData">New Contact</button>
+    </div>
+
     <p>Total Items: {{totalItems}}</p>
     <nav v-if="totalPages >= 2" class="pagination" role="navigation" aria-label="pagination">
         <a class="pagination-previous"
@@ -51,9 +56,39 @@
             </div>
         </div>
     </div>
+
+    <div id="createData" class="modal" :class="{'is-active': isCreatePopup}">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="field">
+                <div class="label">Name</div>
+                <div class="control">
+                    <input class="input" name="name" v-model="createData.name">
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">Subject</div>
+                <div class="control">
+                    <input class="input" name="subject" v-model="createData.subject">
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">Message</div>
+                <div class="control">
+                    <textarea class="textarea"  v-model="createData.message"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <button class="button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
-    let vm = Vue.createApp({
+    Vue.createApp({
         data: function () {
             return {
                 apiBaseUrl: 'http://localhost:3000/lessons/lesson-13-api',
@@ -66,6 +101,12 @@
                 numOfPageButtons: 5, // should be a odd number,
                 deleteId: null,
                 isDeletePopup: false,
+                isCreatePopup: false,
+                createData: {
+                    name: '',
+                    subject: '',
+                    message: ''
+                }
             }
         },
         computed: {
@@ -145,6 +186,15 @@
                     this.page = pageNum;
                     this.offset = (pageNum - 1) * this.pageSize;
                     this.fetchData();
+                }
+            },
+            createData() {
+                console.log("createData");
+                this.isCreatePopup = true;
+                this.createData = {
+                    name: '',
+                    subject: '',
+                    message: ''
                 }
             },
             viewData(id) {
